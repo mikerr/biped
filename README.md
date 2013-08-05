@@ -1,4 +1,10 @@
 biped
 =====
 
-raspberry pi biped walker
+Raspberry Pi biped walker
+
+6 Servos
+
+Hip,Knee,ankle
+
+Requires Servoblaster
