@@ -1,7 +1,7 @@
 biped
 =====
 
-Raspberry Pi biped walker
+Raspberry Pi biped walker using python
 
 6 Servos
 
