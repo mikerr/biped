@@ -1,9 +1,12 @@
 biped
 =====
 
-Raspberry Pi biped walker using python
+
+Raspberry Pi biped walker using python / C
 
 6 Servos
+
+3 degreees of freedom in each leg
 
 Hip,Knee,ankle
 
