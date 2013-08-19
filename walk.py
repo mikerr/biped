@@ -1,21 +1,22 @@
+#!/usr/bin/python
 import time
 import subprocess
 
-# make list of 7 items
-positions = [0] * 7
 
 # set default positions
 
 mid = 140
 off = 0
 
+# make list of 8 items
+positions = [0] * 8
 
-rightankle = 1
-leftankle = 2
-righthip = 3
-leftknee = 4
-rightknee = 5
-lefthip  = 6
+rightankle = 2
+leftankle = 3
+rightknee = 4
+leftknee = 5
+righthip = 6
+lefthip  = 7
 
 def stepservo(joint,endpos):
         startpos = positions[joint]
@@ -36,7 +37,7 @@ def servo(joint,position):
 
 # center all servos
 
-for joint in range(1,7):
+for joint in range(0,8):
         servo(joint,mid)
 
 time.sleep(1)
@@ -62,7 +63,7 @@ for x in range (1,9):
 
         for step in range(1,500):
                 stepservo(righthip,mid-rightstride)
-                stepservo(rightknee,mid-00)
+                stepservo(rightknee,mid)
 
         #centre
 
@@ -88,7 +89,7 @@ for x in range (1,9):
 
         for step in range(1,500):
                 stepservo(lefthip,mid+leftstride)
-                stepservo(leftknee,mid+0)
+                stepservo(leftknee,mid)
 
         #lean left
 
@@ -106,13 +107,14 @@ for x in range (1,9):
 
 # back to neutral
 
-for joint in range(1,7):
+for joint in range(0,8):
         servo(joint,mid)
 
 time.sleep(0.5)
 
 # turn off
-for joint in range(1,7):
+for joint in range(0,8):
         servo(joint,off)
 		
+time.sleep(0.5)
 
