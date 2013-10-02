@@ -11,12 +11,12 @@ off = 0
 # make list of 8 items
 positions = [mid] * 8
 
-rightankle = 0
-leftankle = 1
-righthip = 2
-leftknee = 4
-rightknee = 5
-lefthip  = 6
+rightankle = 2
+leftankle = 3
+rightknee = 4
+leftknee = 5
+righthip = 6
+lefthip  = 7
 
 
 def stepservo(joint,endpos):

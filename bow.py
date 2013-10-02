@@ -2,8 +2,8 @@
 import time
 import subprocess
 
-# make list of 7 items
-positions = [0] * 7
+# make list of 8 items
+positions = [0] * 8
 
 # set default positions
 
@@ -11,12 +11,12 @@ mid = 140
 off = 0
 
 
-rightankle = 1
-leftankle = 2
-righthip = 3
-leftknee = 4
-rightknee = 5
-lefthip  = 6
+rightankle = 2
+leftankle = 3
+rightknee = 4
+leftknee = 5
+righthip = 6
+lefthip  = 7
 
 def stepservo(joint,endpos):
         startpos = positions[joint]

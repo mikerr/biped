@@ -13,9 +13,9 @@ positions = [mid] * 8
 
 rightankle = 2
 leftankle = 3
-righthip = 4
+rightknee = 4
 leftknee = 5
-rightknee = 6
+righthip = 6
 lefthip  = 7
 
 
@@ -35,7 +35,7 @@ def servo(joint,position):
         subprocess.call (command, shell=True)
         positions[joint] = position
 
-# center 
+# center all servos
 
 for joint in range(0,8):
 	servo(joint,mid)
