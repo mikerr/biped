@@ -2,7 +2,6 @@
 import time
 import subprocess
 
-
 # set default positions
 
 mid = 140
@@ -10,13 +9,13 @@ off = 0
 
 
 # make list of 8 items
-positions = [mid] * 8
+positions = [0] * 8
 
 rightankle = 2
 leftankle = 3
-righthip = 4
+rightknee = 4
 leftknee = 5
-rightknee = 6
+righthip = 6
 lefthip  = 7
 
 def stepservo(joint,endpos):
@@ -46,23 +45,27 @@ time.sleep(1)
 for step in range(1,200): 
         stepservo(leftankle,mid-30)
 for step in range(1,200): 
-        stepservo(rightankle,mid-10)
+        stepservo(rightankle,mid-15)
 
 # super speed kick:
 
-servo(righthip,mid+50)
+servo(lefthip,mid+30)
 servo(leftknee,mid-50)
-time.sleep(0.2)
-servo(leftknee,mid)
-servo(leftankle,mid)
 
 time.sleep(0.2)
+
+# put leg down again
+servo(leftankle,mid)
+servo(rightankle,mid)
+servo(lefthip,mid)
+servo(leftknee,mid)
 for step in range(1,200): 
-	stepservo(righthip,mid)
+	stepservo(lefthip,mid)
+	stepservo(leftknee,mid)
 
 # restore to neutral 
 for step in range(1,200): 
-	for joint in range(1,7):
+	for joint in range(0,8):
         	stepservo(joint,mid)
 
 time.sleep(1)

@@ -53,7 +53,7 @@ for x in range (1,9):
 
         #lean left
 
-        for step in range(1,500):
+        for step in range(1,100):
                 stepservo(leftankle,mid+30)
                 stepservo(rightankle,mid+30)
 
@@ -61,19 +61,19 @@ for x in range (1,9):
         # lift right leg
 
 
-        for step in range(1,500):
+        for step in range(1,100):
                 stepservo(righthip,mid-rightstride)
                 stepservo(rightknee,mid)
 
         #centre
 
-        for step in range(1,500):
+        for step in range(1,100):
                 stepservo(leftankle,mid)
                 stepservo(rightankle,mid)
 
         # drop right leg
 
-        for step in range(1,500):
+        for step in range(1,100):
                 stepservo(righthip,mid)
                 stepservo(rightknee,mid)
 
@@ -81,25 +81,25 @@ for x in range (1,9):
 
         # lean right
 
-        for step in range(1,500):
-                stepservo(leftankle,mid-15)
+        for step in range(1,100):
                 stepservo(rightankle,mid-15)
+                stepservo(leftankle,mid-15)
 
         # lift left leg
 
-        for step in range(1,500):
+        for step in range(1,100):
                 stepservo(lefthip,mid+leftstride)
                 stepservo(leftknee,mid)
 
         #lean left
 
-        for step in range(1,500):
+        for step in range(1,100):
                 stepservo(leftankle,mid)
                 stepservo(rightankle,mid)
 
         # drop right leg
 
-        for step in range(1,500):
+        for step in range(1,100):
                 stepservo(lefthip,mid)
                 stepservo(leftknee,mid)
 
