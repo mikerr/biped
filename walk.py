@@ -9,7 +9,7 @@ mid = 140
 off = 0
 
 # make list of 8 items
-positions = [0] * 8
+positions = [mid] * 8
 
 rightankle = 2
 leftankle = 3
@@ -42,11 +42,11 @@ for joint in range(0,8):
 
 time.sleep(1)
 
+# do 10 strides
+for x in range (1,5):
 
-for x in range (1,9):
-
-
-        leftstride = 20
+	# length of stride 
+        leftstride = 25
         rightstride = 20
 
         #left side
