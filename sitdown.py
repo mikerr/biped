@@ -35,36 +35,41 @@ def servo(joint,position):
         positions[joint] = position
 
 
-# center all servos
-
-for joint in range(1,7):
-        servo(joint,mid)
-
-time.sleep(1)
 
 # begin movements
 
+for joint in range(0,8):
+        servo(joint,mid)
 
-# lean forward
+# lean torso forward
 
 for step in range(1,500): 
         stepservo(lefthip,mid+100)
         stepservo(righthip,mid-100)
 
+# bend knees back
 
-# lean back
+for step in range(1,500): 
+        stepservo(leftknee,mid+100)
+        stepservo(rightknee,mid-100)
 
-for step in range(1,500): # lean back
-         stepservo(lefthip,mid-100)
-         stepservo(righthip,mid+100)
+# Now sitting down - wait a while
+time.sleep(4)
+
+# straigten knees
+for step in range(1,500): 
+        stepservo(leftknee,mid)
+        stepservo(rightknee,mid)
 
 
-# center
-for step in range(1,500):
+# torso to neutral
+for step in range(1,500): 
         stepservo(lefthip,mid)
         stepservo(righthip,mid)
 
-# turn off all servos
+
+time.sleep(1)
 for joint in range(0,8):
         servo(joint,off)
+		
 time.sleep(1)
