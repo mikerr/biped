@@ -2,6 +2,8 @@
 import time
 import subprocess
 
+# fastwalk.py 
+# 13 seconds / 8 steps / 30cm
 
 # set default positions
 
