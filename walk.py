@@ -2,6 +2,8 @@
 import time
 import subprocess
 
+# walk.py
+# 18 secs / 8 steps / 30cm
 
 # set default positions
 
