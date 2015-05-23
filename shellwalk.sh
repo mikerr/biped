@@ -31,12 +31,11 @@ joints()
 joints  $mid $mid $mid $mid $mid $mid
 
 joints 0 0 0 0 110 170
-
-sleep 5
 joints 160 110 0 0 0 0
 joints 160 110 0 90 110 0
 
 sleep 5
+joints 0 0 0 0 0 0
 # center joints & turn off
 joints  $mid $mid $mid $mid $mid $mid
 joints 0 0 0 0 0 0
